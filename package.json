@@ -1,0 +1,40 @@
+{
+  "name": "wp-seo-hub",
+  "version": "1.0.0",
+  "description": "AI-powered WordPress SEO management dashboard for agencies and freelancers",
+  "author": "Konko Maji <work.konkomaji@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/konkomaji/wp-seo-hub",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konkomaji/wp-seo-hub.git"
+  },
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.31.0",
+    "cors": "^2.8.5",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^140.0.1",
+    "lucide-react": "^0.383.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "start": "concurrently --names \"REACT,API\" -c \"cyan,yellow\" \"react-scripts start\" \"node server/index.js\"",
+    "client": "react-scripts start",
+    "server": "node server/index.js",
+    "build": "react-scripts build",
+    "serve": "NODE_ENV=production node server/index.js"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version"]
+  }
+}
